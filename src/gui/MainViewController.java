@@ -32,7 +32,7 @@ public class MainViewController implements Initializable{
 	
 	@FXML
 	public void onMenuItemDepartmentAction() {
-		System.out.println("onMenuItemDepartmentAction");
+		loadView("/gui/DepartmentList.fxml");
 	}
 	
 	@FXML
@@ -45,7 +45,7 @@ public class MainViewController implements Initializable{
 		
 	}
 	
-	//método para reutilizar a aba menú, limpar o corpo da aplicação e carregar a visualização do About
+	//método para reutilizar a aba menú, limpar o corpo da aplicação e carregar a visualização das demais telas
 	//synchronized garante que será executado todo o método de multiThread.
 	private synchronized void loadView(String absoluteName) {
 		try {
